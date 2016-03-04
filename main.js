@@ -4,23 +4,29 @@ $(document).ready(function() {
 function divisableBy(number, divisor) {
     return number % divisor === 0;
 }
+function write(whatToWrite) {
+    $('body').append(whatToWrite + "<br>");
+}
 
 function fizzBuzz(inputFizz) {
     for (i = 1;  i <= inputFizz; i++) {
          if (divisableBy(i,3) && divisableBy(i,5)) {
-            $('body').append("FizzBuzz");
+            write("FizzBuzz");
         } else if (divisableBy(i,3)) {
-            $('body').append("Fizz");
+            write("Fizz");
         } else if (divisableBy(i,5)){
-            $('body').append("Buzz");
+            write("Buzz");
         } else {
-            $('body').append(i);
+            write(i);
         } 
     }
 }
 
 // promt user for a number
 var inputFizz = prompt("Enter your number here! Let's FizzBuzz!");
+
+// JavaScript to convert a string into an integer.
+parseInt(inputFizz, 10);
 
 // check to see if it's a whole number between 1-100
 if (inputFizz > 100) {
@@ -33,10 +39,6 @@ fizzBuzz(inputFizz);
 
 }
 
-//convert the value the user supplies from a string to a number using +
-
-// JavaScript to convert a string into an integer.
-parseInt(string, radix);
 
 // no, then promt for real number
     // prompt("Are you sure that's a real number?");
