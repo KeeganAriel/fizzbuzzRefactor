@@ -36,9 +36,10 @@ fizzBuzz(inputFizz);
 //convert the value the user supplies from a string to a number using +
 
 // no, then promt for real number
-prompt("Are you sure that's a real number?");
+    // prompt("Are you sure that's a real number?");
 
 // validate user input to ensure the user is submitting a number. use the parseInt() function in 
+
 // JavaScript to convert a string into an integer.
 parseInt(string, radix);
 
