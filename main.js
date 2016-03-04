@@ -28,20 +28,19 @@ if (inputFizz > 100) {
 } if (inputFizz < 1) {
     prompt("Enter a number that's bigger then or equal to 1.");
 } else { 
-    // call fizzBuzz on number
+    // yes, call fizzBuzz on number
 fizzBuzz(inputFizz);
 
 }
 
 //convert the value the user supplies from a string to a number using +
 
+// JavaScript to convert a string into an integer.
+parseInt(string, radix);
+
 // no, then promt for real number
     // prompt("Are you sure that's a real number?");
 
-// validate user input to ensure the user is submitting a number. use the parseInt() function in 
-
-// JavaScript to convert a string into an integer.
-parseInt(string, radix);
 
 // code to ensure that the user has not supplied a decimal value
 
