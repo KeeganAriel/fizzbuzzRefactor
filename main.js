@@ -23,31 +23,54 @@ function fizzBuzz(inputFizz) {
 }
 
 // promt user for a number
-var inputFizz = prompt("Enter your number here! Let's FizzBuzz!");
+var inputFizz = false;
 
-// JavaScript to convert a string into an integer.
-var processedInputFizz = parseInt(inputFizz, 10);
+// // JavaScript to convert a string into an integer.
+// var processedInputFizz = parseInt(inputFizz, 10);
 
-// check for NaN
-if (isNaN(processedInputFizz)) {
-    prompt("Are you sure that's a real number? Enter a number!");
 
-// code to ensure that the user has not supplied a decimal value
-} else if (processedInputFizz !== parseFloat(inputFizz)) {
-    prompt("Enter a number that's not a decimal!!");
+function validInput(userString) {
+    if (isNaN(userString)) {
+        return false;
+    } 
+
+    if (userString % 1 !== 0) {
+      return false;
+    } 
+    if (userString <= 0) {
+        return false; 
+    } if (userString > 100) {
+        return false;
+    }
+    return true;
+
 }
+do {
+    inputFizz = prompt("Enter your number here! It should be between 1 and 100 and a whole number!  Let's FizzBuzz!");
 
-// check to see if it's a whole number between 1-100
-if (processedInputFizz > 100) {
-    prompt("You need to enter a smaller number!");
-} if (processedInputFizz < 1) {
-    prompt("Enter a number that's bigger then or equal to 1.");
-} else { 
+} while (validInput(inputFizz) === false);
+
+    var processedInputFizz = parseInt(inputFizz, 10);
+
+// // check for NaN
+// if (isNaN(processedInputFizz)) {
+//     inputFizz = prompt("Are you sure that's a real number? Enter a number!");
+
+
+// // code to ensure that the user has not supplied a decimal value
+// } else if (processedInputFizz !== parseFloat(inputFizz)) {
+//    inputFizz = prompt("Enter a number that's not a decimal!!");
+// }
+
+// // check to see if it's a whole number between 1-100
+// if (processedInputFizz > 100) {
+//     prompt("You need to enter a smaller number!");
+// } if (processedInputFizz < 1) {
+//     prompt("Enter a number that's bigger then or equal to 1.");
+// } else { 
 
 // yes, call fizzBuzz on number
 fizzBuzz(processedInputFizz);
-
-}
 
 
 
